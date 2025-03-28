@@ -16,6 +16,11 @@ adduser User_name (to add a account)
 sudo apt install app_name
 ls -a   ## to see the hidden files
 
+#####lock file
+#find . -name '*lck*' '*panic.log*'
+#find . -name '*lck*' '*panic.log*' -exec rm {} +
+find . \( -name '*lck*' -o -name '*panic.log*' \)
+find . \( -name '*lck*' -o -name '*panic.log*' \) -exec rm {} +
 
 
 
