@@ -2,7 +2,7 @@ Basic commands in Linux
 
 df -h    ##check the space
 du -h /folder_name   ## check space of specific folder
-du -sh *  ##to check the memory consumed by each folder
+du -sh *  ##to check the memory consumed by each folder (used mostly by me)
 
 visudo           ##to add sudo usser for admin access""
 cat /etc/passwd      ####path that shows the user app_name
