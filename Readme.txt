@@ -31,6 +31,6 @@ find . \( -name '*lck*' -o -name '*panic.log*' \) -exec rm {} +
 
 
 ANALOG - OP-AMP 
-Virtual short is valid until which point - Virtual short of the op-amp is valid until the output of the op-amp saturates
-
+Virtual short is valid until which point - Virtual short of the op-amp is valid until the output of the op-amp saturates (It doesnt follow the virtual ground once the output of the opamp saturates)
+The virtual short condition is valid as long as the op-amp operates within its linear region. When the op-amp's output reaches its saturation point (i.e., it can no longer increase or decrease its output voltage), the virtual short condition no longer holds. In essence, the virtual short is dependent on the op-amp's ability to adjust its output to maintain the near-zero voltage difference between its inputs. Once it saturates, it loses this ability
 
