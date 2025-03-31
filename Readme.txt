@@ -25,3 +25,12 @@ find . \( -name '*lck*' -o -name '*panic.log*' \) -exec rm {} +
 
 
 
+
+
+
+
+
+ANALOG - OP-AMP 
+Virtual short is valid until which point - Virtual short of the op-amp is valid until the output of the op-amp saturates
+
+
