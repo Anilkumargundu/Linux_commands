@@ -17,6 +17,8 @@ adduser User_name (to add a account)
 sudo apt install app_name
 sudo apt update
 ls -a   ## to see the hidden files
+find ~ -name "*your_filename*"  ### this will search for the fine_name in all paths
+
 
 #####lock file
 #find . -name '*lck*' '*panic.log*'
