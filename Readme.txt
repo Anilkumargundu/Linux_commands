@@ -1,5 +1,4 @@
 Basic commands in Linux
-Windos + E and \\wsl$ to access linux
 lsb_release -a  ###to check the version of ubuntu
 df -h    ##check the space
 du -h /folder_name   ## check space of specific folder
@@ -19,6 +18,12 @@ sudo apt install app_name
 sudo apt update
 ls -a   ## to see the hidden files
 find ~ -name "*your_filename*"  ### this will search for the fine_name in all paths
+
+###access the ubuntu from windos (WSL install)
+Windos + E and \\wsl$ to access linux
+
+## access windows from ubuntu 
+/mnt
 
 
 #####lock file
