@@ -1,5 +1,5 @@
 Basic commands in Linux
-
+lsb_release -a  ###to check the version of ubuntu
 df -h    ##check the space
 du -h /folder_name   ## check space of specific folder
 du -sh *  ##to check the memory consumed by each folder (used mostly by me)
