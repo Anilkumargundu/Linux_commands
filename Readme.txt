@@ -15,6 +15,7 @@ grep 'keyword" (to seach a specific word in the file)
 cat file_name | grep 'search_word"
 adduser User_name (to add a account)
 sudo apt install app_name
+sudo apt update
 ls -a   ## to see the hidden files
 
 #####lock file
