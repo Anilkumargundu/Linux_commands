@@ -1,4 +1,5 @@
 Basic commands in Linux
+Windos + E and \\wsl$ to access linux
 lsb_release -a  ###to check the version of ubuntu
 df -h    ##check the space
 du -h /folder_name   ## check space of specific folder
