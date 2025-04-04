@@ -19,6 +19,7 @@ sudo apt update
 ls -a   ## to see the hidden files
 find ~ -name "*your_filename*"  ### this will search for the fine_name in all paths
 
+git checkout -b branch_name
 ###access the ubuntu from windos (WSL install)
 Windos + E and \\wsl$ to access linux
 
