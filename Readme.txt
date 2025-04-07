@@ -34,6 +34,20 @@ find . \( -name '*lck*' -o -name '*panic.log*' \)
 find . \( -name '*lck*' -o -name '*panic.log*' \) -exec rm {} +
 
 
+####python related :
+pip show torch (or package name)  ## this will show the deltails of the package where installed, which version etc....
+
+##  this will show the path where the python is installed
+import sys
+print(sys.executable)
+##
+
+If the packages are installed but not in the path where the python is installed, then you have to append the path in your code like below :
+##
+import sys
+sys.path.append('/path/where/the/package/installed')
+##
+
 
 
 
