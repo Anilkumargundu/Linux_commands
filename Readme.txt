@@ -63,6 +63,21 @@ import sys
 sys.path.append('/path/where/the/package/installed')
 ##
 
+###############pytorch###############
+1. Why __len__ and __getitem__ Matter
+PyTorch’s Dataset class requires two core methods to work seamlessly with DataLoader:
+
+__len__: Returns the total number of samples in the dataset.
+
+__getitem__: Fetches a single sample (e.g., input and target) by index.
+
+By defining these, your custom dataset becomes a standardized interface that DataLoader understands. Think of it like a checklist:
+
+The DataLoader uses __len__ to know how many batches to create.
+
+It uses __getitem__ to fetch individual samples and collate them into batches.
+
+#############################################
 
 
 
