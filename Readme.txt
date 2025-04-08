@@ -28,6 +28,20 @@ Windos + E and \\wsl$ to access linux
 /mnt
 
 
+##################
+Final Notes
+Why Shift Targets by 1?
+Language models predict the next token in the sequence. For input [tok1, tok2, tok3], the target is [tok2, tok3, tok4].
+
+Dataset Compatibility:
+With __len__ and __getitem__, you can now use DataLoader to batch and shuffle the data:
+
+python
+Copy
+dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
+#############
+
+
 #####lock file
 #find . -name '*lck*' '*panic.log*'
 #find . -name '*lck*' '*panic.log*' -exec rm {} +
