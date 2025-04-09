@@ -99,7 +99,9 @@ It uses __getitem__ to fetch individual samples and collate them into batches.
 
 ######################################################
 data_iter = iter(dataloader)  # Creates an iterator object. The iterator data_iter knows how to fetch batches sequentially from the dataloader.
-
+######################################################
+first_batch = next(data_iter)  # Get the first batch
+The next() function asks the iterator for the next batch. Since batch_size=2, the first batch contains the first 2 samples from the dataset.
 
 
 
