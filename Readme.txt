@@ -115,3 +115,15 @@ The virtual short condition is valid as long as the op-amp operates within its l
 Miller capacitance :
 Any impedance connected connected between two nodes (say p and q) in a circuit can always be resolved into two impedences : one between p and GND, other between q and GND as long as there is a stringant relation between p and q at low frequences irrespective of the presence of the impedance between p and q. This means even though the impedance between p and q is absent, the relation between p and q still exists
 Any impedance connected between two nodes (say p and q) in a circuit can always be resolved into two impedances: one between p and GND, and the other between q and GND, provided there is a strong relationship between the voltages at p and q at low frequencies, regardless of the presence of a direct impedance between p and q. This implies that even if the direct impedance between p and q is absent, the relationship between their voltages still exists.
+
+Open_source Simulators I am using :
+
+Xschem for the schematic
+ngspice for the netlist generation, simulation, and then viewing the results
+magic layout for the layout
+
+
+
+
+
+
