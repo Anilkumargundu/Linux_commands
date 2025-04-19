@@ -11,7 +11,8 @@ cat /etc/shadow             ###########to know the shell and home folder
 
 cat   ## to see the content int the file
 cat auth.log | less   ##(to see page by page)
-grep 'keyword" (to seach a specific word in the file)
+grep 'keyword" (to search a specific word in the file)
+grep  userfile 'keyword' -> destination_file   ######collects all the lines containing 'keyword' from userfile and writes to destination file
 cat file_name | grep 'search_word"
 adduser User_name (to add a account)
 sudo apt install app_name
