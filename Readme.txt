@@ -124,6 +124,12 @@ Xschem for the schematic
 ngspice for the netlist generation, simulation, and then viewing the results
 magic layout for the layout
 
+analoglibin xschem:
+vsource.sym
+cap
+res
+gnd.sym --- ground
+
 
 
 
