@@ -125,7 +125,7 @@ Open_source Simulators I am using :
 Xschem for the schematic
 ngspice for the netlist generation, simulation, and then viewing the results
 magic layout for the layout
-
+save the netlist before running the simulator. Then the waveform reloader will reload
 analoglibin xschem:
 vsource.sym
 cap
