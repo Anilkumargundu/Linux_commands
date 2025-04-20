@@ -13,6 +13,8 @@ cat   ## to see the content int the file
 cat auth.log | less   ##(to see page by page)
 grep 'keyword" (to search a specific word in the file)
 grep  userfile 'keyword' -> destination_file   ######collects all the lines containing 'keyword' from userfile and writes to destination file
+grep -i '^R' cap_10pF_mim_mom.pex.netlist > capacitor.txt  ######collects all the lines starting with R from userfile and writes to destination file
+
 cat file_name | grep 'search_word"
 adduser User_name (to add a account)
 sudo apt install app_name
