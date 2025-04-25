@@ -132,6 +132,16 @@ cap
 res
 gnd.sym --- ground
 
+#################### Procedure for invoking the xschem and setting up the environment for simulations################
+1. copy the xschemrc file from "/usr/local/share/pdk/sky130B/libs.tech/xschem/" to the working directory
+     The pdk is copied/saved to the path "/usr/local/share/pdk/sky130B/libs.tech/xschem/"
+2. Once you copied xschem to your working directory, you can invode xschem :  How to invoke the xschem?
+     xschem &
+3. the default extension of the file_name is .sch (example : user_file_name.sch)
+    xschem user_file_name.sch &
+#####################################################################################################################
+
+
 
 
 
