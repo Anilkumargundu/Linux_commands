@@ -144,7 +144,13 @@ gnd.sym --- ground
     xschem user_file_name.sch &
 #####################################################################################################################
 
-
+##############################temperature variations - DC characteritcs of inverter ngspice #############################
+name=s1 only_toplevel=false value= "
+.dc Vinp 0 2 0.1 TEMP 1 100 10
+.save all
+.control
+ write inv_tran.raw
+.endc"
 
 
 
