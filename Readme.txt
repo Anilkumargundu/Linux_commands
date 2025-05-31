@@ -19,6 +19,7 @@ cat file_name | grep 'search_word"
 adduser User_name (to add a account)
 sudo apt install app_name
 sudo apt update
+su -- user name ## to switch to sudoe user or to switch from root 
 ls -a   ## to see the hidden files
 find ~ -name "*your_filename*"  ### this will search for the fine_name in all paths
 
