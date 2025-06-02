@@ -132,6 +132,7 @@ Xschem for the schematic
 ngspice for the netlist generation, simulation, and then viewing the results
 magic layout for the layout
 save the netlist before running the simulator. Then the waveform reloader will reload
+Command for plotting gain and phase plot in ngspice : plot db(v(node)) 180*cph(v(node))/pi
 analoglibin xschem:
 vsource.sym
 cap
