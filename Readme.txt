@@ -32,6 +32,7 @@ Windos + E and \\wsl$ to access linux
 ## access windows from ubuntu 
 /mnt
 
+If paths are not same python -m streamlit run
 
 ##################
 Final Notes
