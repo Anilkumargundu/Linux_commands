@@ -112,7 +112,7 @@ The next() function asks the iterator for the next batch. Since batch_size=2, th
 
 
 
-COMMOM MODE FEEDBACK + SELF BIASING OF THE DIFF PAIR
+COMMOM MODE FEEDBACK (FOR BIASING THE UNDEFINED NETS) + SELF BIASING OF THE DIFF PAIR
 
 ANALOG - OP-AMP 
 Virtual short is valid until which point - Virtual short of the op-amp is valid until the output of the op-amp saturates (It doesnt follow the virtual ground once the output of the opamp saturates)
