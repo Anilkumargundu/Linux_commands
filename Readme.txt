@@ -142,6 +142,12 @@ cap
 res
 gnd.sym --- ground
 
+#####################Procedure to invoke magic layout in the terminal################
+magic  -rcfile /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc
+-rcfile will intantiates or makes sure the the layouts of the SKY130A library is called.
+makesure that the sky130A.magicrc file do exist at the path "usr/local/share/pdk/sky130A/libs.tech/magic/"  Otherwise check for the file in the pdk folder and copy in side the magic or just copy where you want (not sure this)
+
+
 #################### Procedure for invoking the xschem and setting up the environment for simulations################
 1. copy the xschemrc file from "/usr/local/share/pdk/sky130B/libs.tech/xschem/" to the working directory
      The pdk is copied/saved to the path "/usr/local/share/pdk/sky130B/libs.tech/xschem/"
