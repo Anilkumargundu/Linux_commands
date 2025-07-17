@@ -136,6 +136,8 @@ SECOND ORDER EFFECTS OF MOSFET:
 3. Velocity Saturation : Current varies linearly instead of quadratic in saturation region w.r.t VGS 
 Gist: Because of VDS : channel gets modulated, threshold voltage gets modulated, and velocity gets saturated)
 
+LEVEL-1 SPICE MODEL PARAMETERS : mu, lambda, threhsold_voltage, Vdsat(velocity saturation), and gamma. These 5 parameters uniquely characterize transistor in a particular technology
+
 Open_source Simulators I am using :
 
 Xschem for the schematic
