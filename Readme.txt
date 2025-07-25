@@ -116,7 +116,7 @@ COMMOM MODE FEEDBACK (FOR BIASING THE UNDEFINED NETS) + SELF BIASING OF THE DIFF
 
 ANALOG - OP-AMP 
 Virtual short is valid until which point - Virtual short of the op-amp is valid until the output of the op-amp saturates (It doesnt follow the virtual ground once the output of the opamp saturates)
-The virtual short condition is valid as long as the op-amp operates within its linear region. When the op-amp's output reaches its saturation point (i.e., it can no longer increase or decrease its output voltage), the virtual short condition no longer holds. In essence, the virtual short is dependent on the op-amp's ability to adjust its output to maintain the near-zero voltage difference between its inputs. Once it saturates, it loses this ability\
+The virtual short condition is valid as long as the op-amp operates within its linear region. When the op-amp's output reaches its saturation point (i.e., it can no longer increase or decrease its output voltage), the virtual short condition no longer holds. In essence, the virtual short is dependent on the op-amp's ability to adjust its output to maintain the near-zero voltage difference between its inputs. Once it saturates, it loses this ability.
 
 UGB is critical for analyzing the stability of negative feedback systems. As far as the closed-loop gain is considered, UGB doesnt make any sense. As the closed loop gain will become 0.5 at UGB, so as far as the negative feedback to be stronger, we have to think about the frequencies until where the oper-loop gain is atleast 10 times higher than 1, that meanse Ab > 10, then A/(1+Ab) will be 1/b. So,the phase margin at the UGB frequency is a key indicator of how stable the feedback system will be. Hence, as far as the UGB is concerned, stability is the key indicator we get from UGB.
 
@@ -136,7 +136,7 @@ SECOND ORDER EFFECTS OF MOSFET:
 3. Velocity Saturation : Current varies linearly instead of quadratic in saturation region w.r.t VGS 
 Gist: Because of VDS : channel gets modulated, threshold voltage gets modulated, and velocity gets saturated)
 
-LEVEL-1 SPICE MODEL PARAMETERS : mu, lambda, threhsold_voltage, Vdsat(velocity saturation), and gamma. These 5 parameters uniquely characterize transistor in a particular technology
+LEVEL-1 SPICE MODEL PARAMETERS : mu, lambda, threhsold_voltage, Vdsat(velocity saturation), and gamma. These 5 parameters uniquely characterize transistor in a particular technology. GIDL is w.r.t gate tosource voltage
 
 Open_source Simulators I am using :
 
