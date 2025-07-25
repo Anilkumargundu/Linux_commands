@@ -138,6 +138,8 @@ Gist: Because of VDS : channel gets modulated, threshold voltage gets modulated,
 
 LEVEL-1 SPICE MODEL PARAMETERS : mu, lambda, threhsold_voltage, Vdsat(velocity saturation), and gamma. These 5 parameters uniquely characterize transistor in a particular technology. GIDL is w.r.t gate tosource voltage
 
+HOW TO CALCULATE THE GM OF THE MOSFET : Find an operating point for VGS, IDS for a given VDS, then find the differentiation of the IDS wrt to VGS around that operating point. This is called the gm. In general we can fit the IDS vs VGS data to the nearest sqaure law equation and compare the simulated values with the nearest square-law equation. We can clearly see the IDS is changing slow or fast w.r.t square law equation as kind of sens the gm is underestimated or over-estimated.
+
 Open_source Simulators I am using :
 
 Xschem for the schematic
