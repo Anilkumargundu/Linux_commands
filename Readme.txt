@@ -126,6 +126,10 @@ Miller capacitance :
 Any impedance connected connected between two nodes (say p and q) in a circuit can always be resolved into two impedences : one between p and GND, other between q and GND as long as there is a stringant relation between p and q at low frequences irrespective of the presence of the impedance between p and q. This means even though the impedance between p and q is absent, the relation between p and q still exists
 Any impedance connected between two nodes (say p and q) in a circuit can always be resolved into two impedances: one between p and GND, and the other between q and GND, provided there is a strong relationship between the voltages at p and q at low frequencies, regardless of the presence of a direct impedance between p and q. This implies that even if the direct impedance between p and q is absent, the relationship between their voltages still exists.
 
+#######SOURCE DEGENERATION NOTES######
+We can generate a stable current even if VGS and VDS (not PV) is varied, How can we do that? Take an NMOS (or PMOS) and connect a very big resistor at the dource, this resistor introduces feedback and, if the resistor is so large, it will prevent changes in Vgs. This means, if the device follows square law, even thogh the vgs is flucating, the source resistor makes sure that the (vgs-Vt) always constant and the current will not change even the gate voltage is changing. VDS any-way will not have effect (atleast ideal case)
+######################################
+
 
 #############MOSFET Notes#####################
 Mobility (un) will decrease kind of exponentially with temperature. Threshold voltage (Vt) decreases linearly with temperature. If an NMOS is connected in a diode connected fashion and a constant current is forced, then under these coniderations, the gm varies largely with temperature than the VDS due to the fact that the mobility decreases exponentially
