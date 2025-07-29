@@ -153,7 +153,8 @@ For a given MOS size, if I keep decreasing the current from max to min or increa
 
 
 #######SRAM Notes##########
-Vt variations will be ther as the SRAM cell is scaled down aggressively and operated at very low voltages. So make sure that the cells falling in the tails of the gaussian curve are working fine (lets say around 5 sigma to 6 sigma). If they are operating ok ok, then the yield will automatically improve
+Vt variations will be ther as the SRAM cell is scaled down aggressively and operated at very low voltages. So make sure that the cells falling in the tails of the gaussian curve are working fine (lets say around 5 sigma to 6 sigma). If they are operating ok ok, then the yield will automatically improves.
+How to enhance SNM in SRAM cell: 8T-SRAM, we can decouple the internal node separately for reading purpose by adding two extra NMOS devices and make 6T SRAM as an 8T SRAM cell to increase the static noise margin (SNM)
 ############################
 
 Open_source Simulators I am using :
