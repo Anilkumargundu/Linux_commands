@@ -126,6 +126,8 @@ Miller capacitance :
 Any impedance connected connected between two nodes (say p and q) in a circuit can always be resolved into two impedences : one between p and GND, other between q and GND as long as there is a stringant relation between p and q at low frequences irrespective of the presence of the impedance between p and q. This means even though the impedance between p and q is absent, the relation between p and q still exists
 Any impedance connected between two nodes (say p and q) in a circuit can always be resolved into two impedances: one between p and GND, and the other between q and GND, provided there is a strong relationship between the voltages at p and q at low frequencies, regardless of the presence of a direct impedance between p and q. This implies that even if the direct impedance between p and q is absent, the relationship between their voltages still exists.
 
+
+#############MOSFET Notes#####################
 Mobility (un) will decrease kind of exponentially with temperature. Threshold voltage (Vt) decreases linearly with temperature. If an NMOS is connected in a diode connected fashion and a constant current is forced, then under these coniderations, the gm varies largely with temperature than the VDS due to the fact that the mobility decreases exponentially
 
 VELOCITY SATURATION: The saturation velocity or the maximum velocity the charge carriers can attain in the MOSFET is roughly at 100k m/sec. This means, eventhough the VDS is kept on increased, after reaching the maximum velocity, the charge carriers cannot attain any higher velocity than 100k m/sec and device may break. On the other hand, this VDS value is different for different technological nodes. For longer channel length devices, the VDS may be very large may be well above VDD. Generally we do not operate at that higher voltages. Hence we do not see velocity saturation effect in long length devices. However, this saturation voltage decreases as the channel length shrinks. For more aggressive technological nodes, it may have as smaller as 0.3V-0.5V (may be smaller than Vt). Hence, before reaching the normal current saturation region, the devices hit the velocity saturation and the current changes linearly rather than qadratically wrt VGS  
@@ -137,13 +139,22 @@ SECOND ORDER EFFECTS OF MOSFET:
 Gist: Because of VDS : channel gets modulated, threshold voltage gets modulated, and velocity gets saturated)
 
 LEVEL-1 SPICE MODEL PARAMETERS : mu, lambda, threhsold_voltage, Vdsat(velocity saturation), and gamma. These 5 parameters uniquely characterize transistor in a particular technology. GIDL is w.r.t gate tosource voltage
+################################################
 
+###################Square-law deviation notes###################
 HOW TO CALCULATE THE GM OF THE MOSFET : Find an operating point for VGS, IDS for a given VDS, then find the differentiation of the IDS wrt to VGS around that operating point. This is called the gm. In general we can fit the IDS vs VGS data to the nearest sqaure law equation and compare the simulated values with the nearest square-law equation. We can clearly see the IDS is changing slow or fast w.r.t square law equation as kind of sens the gm is underestimated or over-estimated.
 We often approximate the IDS−VGS relationship with a square law, but in reality, the current scales with VGS to an exponent typically ranging from 1 to 2. This non-ideal behavior means that relying on the simple square law equation will result in significant deviation in the calculated transconductance gm.
+#############################################################
+
 ###################
 For a given MOS size, if I keep decreasing the current from max to min or increasing the current from min to max, the transconductance will match to ideal squared law at certain amount of current. And the error/ deviation increases as the current is moved father from that point
 ###################
 
+
+
+#######SRAM Notes##########
+Vt variations will be ther as the SRAM cell is scaled down aggressively and operated at very low voltages. So make sure that the cells falling in the tails of the gaussian curve are working fine (lets say around 5 sigma to 6 sigma). If they are operating ok ok, then the yield will automatically improve
+############################
 
 Open_source Simulators I am using :
 
