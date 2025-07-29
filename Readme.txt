@@ -157,7 +157,10 @@ Vt variations will be ther as the SRAM cell is scaled down aggressively and oper
 How to enhance SNM in SRAM cell: 8T-SRAM, we can decouple the internal node separately for reading purpose by adding two extra NMOS devices and make 6T SRAM as an 8T SRAM cell to increase the static noise margin (SNM)
 If I still have to worry about area, and  reduce tha rea, istead of decoupling the bumping node by adding 2 device, add a device in the other side of inverter and deactivate that side by opening. This way, even if there is a bump voltage, it wont trip and the SNM would be good
 whichever memory architecture it is (whether SRAM, DRAM, or NVM), the architecture will have row-decoder (for address accessing), column mux, I/O, and control.
-MEMORY CUT - ARCHITECTURE (HOW TO DECODE)
+
+MEMORY CUT - ARCHITECTURE (HOW TO DECODE) - EXAMPLE IS BELOW
+Let's say the memory has labelled as "512words*74bits with mux8" what it actually meets: This means there are 512 words with each word having 74 bits (so the memory capacity is 512*74). Now these 512 words are rearranged with mux8. What this mean? This means 512 rows are folded such that it aligns with mux8 or in other words these 512 words are organized with 8-input multiplex. This means, rows will be 512/8 = 64, number of word columns will be 8 (each with 74 bits). So the address will be like, 6-bits for the row decoding (since 64 rows) and 3 bit for the column-decoding.  
+
 SELF TIMED SRAM : FEEDBACK IS MADE INBUILT
 
 ############################
