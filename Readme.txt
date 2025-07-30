@@ -109,7 +109,8 @@ data_iter = iter(dataloader)  # Creates an iterator object. The iterator data_it
 first_batch = next(data_iter)  # Get the first batch
 The next() function asks the iterator for the next batch. Since batch_size=2, the first batch contains the first 2 samples from the dataset.
 
-
+########BATTERY########
+You have to check how much energy the battery can hold : This can be deduced by checking the parameter mAh and voltage rating. If a certain battery claimns 3000mAh/3V means, it can supply 3000mA with stable 3V continuously for 3V or continuosu 3mA with stable 3V continuosly for 3000 hrs or what ever the current calcultation. From here, you can get energy the battery can store, de/de=p
 
 
 COMMOM MODE FEEDBACK (FOR BIASING THE UNDEFINED NETS) + SELF BIASING OF THE DIFF PAIR
