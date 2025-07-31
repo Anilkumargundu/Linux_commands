@@ -152,9 +152,11 @@ We often approximate the IDS−VGS relationship with a square law, but in realit
 #############################################################
 
 ###################
-For a given MOS size, if I keep decreasing the current from max to min or increasing the current from min to max, the transconductance will match to ideal squared law at certain amount of current. And the error/ deviation increases as the current is moved father from that point
+For a given MOS size, the better way is to see the transconductance plot to get an idea about the linerity and how much it is getting deviated from the square law behavior
 ###################
 
+######BETA MULTIPLIER DESIGN#######
+step 1 : First decide the bias current (minimum bias current in power consumption perspective?)
 
 
 #######SRAM Notes##########
