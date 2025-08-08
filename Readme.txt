@@ -215,4 +215,172 @@ name=s1 only_toplevel=false value= "
 
 
 
+##################################openRAM Compiler########################Steps##################
+0) Quick facts / prerequisites (why we do this)
+OpenRAM is a Python tool (install with pip -r requirements.txt or in a venv). 
+GitHub
+
+OpenRAM needs a technology folder (technology/sky130A) containing gds_lib, sp_lib, tech files, layers.map etc — if OpenRAM’s repo doesn’t include a complete sky130A, you must provide it (community repos often do). 
+OpenRAM
+GitHub
+
+The Sky130 PDK is normally built using open_pdks and referenced via PDK_ROOT. OpenRAM / flows expect PDK_ROOT to point to a directory that contains the sky130A output. 
+opencircuitdesign.com
+
+1) Verify your installed tools & PDK quickly
+Run these checks and paste results if something fails:
+
+bash
+Copy
+Edit
+# check EDA tools
+which magic || echo "magic not in PATH"
+which ngspice || echo "ngspice not in PATH"
+which netgen || echo "netgen not in PATH"
+
+# check PDK location you found
+ls -ld /home/anilk/SETUP/whyRD_eda_bundle/ngspice_git/open_pdks/sky130/sky130A || echo "sky130A missing"
+# quick content check
+ls /home/anilk/SETUP/whyRD_eda_bundle/ngspice_git/open_pdks/sky130/sky130A/libs.tech 2>/dev/null || echo "libs.tech missing under sky130A"
+If any tool is “not in PATH”, either add its bin directory to PATH or create a small wrapper symlink. (I can show exact commands if you want.)
+
+2) Clone OpenRAM (stable) and create a Python venv
+Pick a directory to keep tools (I’ll use ~/tools):
+
+bash
+Copy
+Edit
+mkdir -p ~/tools
+cd ~/tools
+git clone -b stable https://github.com/VLSIDA/OpenRAM.git OpenRAM
+cd OpenRAM
+Create & activate a Python virtualenv and install Python dependencies:
+
+bash
+Copy
+Edit
+python3 -m venv venv_openram
+source venv_openram/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+(If pip install fails, install system build deps like build-essential, python3-dev etc — many tutorials use those.) 
+GitHub
+
+3) Tell OpenRAM where your PDK and tools are (important env vars)
+Add these lines to your ~/.bashrc (or ~/.zshrc), then source ~/.bashrc:
+
+bash
+Copy
+Edit
+# OpenRAM locations
+export OPENRAM_HOME=$HOME/tools/OpenRAM/compiler
+export OPENRAM_TECH=$HOME/tools/OpenRAM/technology
+
+# point PDK_ROOT to the folder that contains sky130A (adjust if you want parent dir)
+export PDK_ROOT=/home/anilk/SETUP/whyRD_eda_bundle/ngspice_git/open_pdks/sky130
+# optional/explicit pointer to the built sky130A
+export SKY130_PDK=$PDK_ROOT/sky130A
+
+# make sure magic/netgen/ngspice are in PATH (adjust your actual bin directories if required)
+export PATH=/usr/local/bin:$PATH    # or add actual bins: /opt/magic/bin:/opt/ngspice/bin etc
+Notes:
+
+OPENRAM_HOME should point to the compiler source directory inside the OpenRAM repo. 
+GitHub
+
+PDK_ROOT should be set so the folder that contains sky130A is discoverable by flows (we used your /home/anilk/.../open_pdks/sky130). 
+opencircuitdesign.com
+
+4) Ensure OpenRAM has a technology folder for sky130A
+OpenRAM expects a technology directory with gds_lib, sp_lib, layers.map, and a tech python module. Check:
+
+bash
+Copy
+Edit
+ls $OPENRAM_TECH/sky130A || echo "sky130A not found in OpenRAM/technology"
+If it exists and contains gds_lib and sp_lib, great.
+
+If it is missing or incomplete, many users reuse a community-provided sky130A folder (there are example repos with full gds_lib/sp_lib for OpenRAM + sky130). You can clone one and copy it into OpenRAM’s technology directory, e.g.:
+
+bash
+Copy
+Edit
+# example (only if OpenRAM/technology/sky130A is missing)
+cd ~/tools
+git clone https://github.com/vsdip/vsdsram_sky130.git
+# copy the OpenRAM/sky130A folder from that repo into OpenRAM technology
+cp -r vsdsram_sky130/OpenRAM/sky130A $OPENRAM_TECH/
+(There are multiple community repos — use carefully and verify contents; OpenRAM docs / community discuss using these additional macro libraries.) 
+GitHub
++1
+
+5) (Optional) Build / install PDK views if needed
+If you installed the Sky130 PDK source but never built the Open-PDKs outputs, you may need to run open_pdks configure/make steps — most environments already have your sky130A built from the bundle you mentioned, so you probably don’t need this. If you do, follow open_pdks instructions to build and install and set PDK_ROOT to the installation prefix. 
+opencircuitdesign.com
+
+6) Run a simple test — generate a small SRAM
+Two ways:
+
+A — Use the openram CLI (if installed by pip) (quick):
+
+bash
+Copy
+Edit
+# from anywhere (with venv active)
+cd $OPENRAM_HOME/../macros  # macros or sram_configs
+openram -v SRAM_32x128_1rw.py
+B — Run the compiler script directly (if CLI not present):
+
+bash
+Copy
+Edit
+# go to macros/sram_configs examples
+cd $OPENRAM_HOME/../macros/sram_configs
+python3 ../../sram_compiler.py example_config_1w_1r_scn4m_subm.py
+Either command will generate the SRAM macro directory and files (GDS, .sp, .lef, .lib, HTML report). Cornell’s OpenRAM tutorial shows this flow and output files. Expect a few minutes for a small macro. 
+cornell-ece5745.github.io
+
+7) What to look for after generation
+In the macro output folder you should see at least:
+
+php-template
+Copy
+Edit
+<SRAM_NAME>.gds
+<SRAM_NAME>.sp
+<SRAM_NAME>.lef
+<SRAM_NAME>_TT_1p1V_25C.lib
+<SRAM_NAME>.html  # report
+If generation fails, the usual reasons:
+
+OPENRAM_TECH/sky130A missing required files (gds/spice models) → copy community sky130A or create the missing cells. 
+OpenRAM
+
+magic, netgen, ngspice not found in PATH — OpenRAM calls these for DRC/LVS/EXTRACT.
+
+mismatched env vars (OPENRAM_HOME, OPENRAM_TECH, PDK_ROOT) — re-check echo $....
+
+8) If you get errors — quick troubleshooting commands
+Paste the error output and run these to collect useful info:
+
+bash
+Copy
+Edit
+# show env vars OpenRAM cares about
+echo OPENRAM_HOME=$OPENRAM_HOME
+echo OPENRAM_TECH=$OPENRAM_TECH
+echo PDK_ROOT=$PDK_ROOT
+echo SKY130_PDK=$SKY130_PDK
+
+# show technology folder contents
+ls -la $OPENRAM_TECH/sky130A || true
+ls -la $SKY130_PDK/libs.tech || true
+
+# check tools:
+magic -version || true
+ngspice -v || true
+netgen -v || true
+If OpenRAM complains about missing cell_6t.gds / sense_amp.gds / write_driver.sp, then gds_lib or sp_lib for sky130 is incomplete — copy from a community repo (as shown above) or create those cells.
+################################################################################################################################################################################################
+
 
