@@ -385,4 +385,5 @@ If OpenRAM complains about missing cell_6t.gds / sense_amp.gds / write_driver.sp
 
 
 To run venv : source venv_openram/bin/activate
+run the command in openram folder :  source venv_openram/bin/activate , this creates environemnt 
 
