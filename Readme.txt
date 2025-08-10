@@ -27,7 +27,7 @@ find ~ -name "*your_filename*"  ### this will search for the fine_name in all pa
 git branch  ( to check which branch you are)
 git checkout -b branch_name
 ###access the ubuntu from windows (WSL install)
-Windows + E and \\wsl$ to access linux
+Windows + R and \\wsl$ to access linux
 
 ## access windows from ubuntu 
 /mnt
