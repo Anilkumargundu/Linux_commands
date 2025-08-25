@@ -383,6 +383,9 @@ netgen -v || true
 If OpenRAM complains about missing cell_6t.gds / sense_amp.gds / write_driver.sp, then gds_lib or sp_lib for sky130 is incomplete — copy from a community repo (as shown above) or create those cells.
 ################################################################################################################################################################################################
 
+#########run the spice file for lvs in Magic###########
+sh run_lvs.sh
+###############################
 
 To run venv : source venv_openram/bin/activate
 run the command in openram folder :  source venv_openram/bin/activate , this creates environemnt 
