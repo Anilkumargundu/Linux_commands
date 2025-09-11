@@ -47,13 +47,34 @@ Copy
 dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
 #############
 
+############jumper_definition_in_overleaf################
+\draw ([xshift=-0.5cm]5.7,1) to[crossing, bipoles/crossing/size=0.7]([xshift=0.5cm]5.6,1);
+1. **Starting point with shift**
+   - `([xshift=-0.5cm]5.7,1)`
+   - Takes the coordinate `(5.7,1)` and shifts it left by `0.5 cm`.
+   - This becomes the **starting point** of the line.
+2. **Drawing a connection with a crossing**
+   - `to[crossing, ...]`
+   - Draws a line-like element between the two coordinates.
+   - The keyword `crossing` places a wire-crossing symbol in the middle.
+3. **Adjusting crossing size**
+   - `bipoles/crossing/size=0.7`
+   - Controls the graphical size of the crossing symbol.
+   - Here it scales the crossing to 70% of its default size.
+4. **Ending point with shift**
+   - `([xshift=0.5cm]5.6,1)`
+   - Takes the coordinate `(5.6,1)` and shifts it right by `0.5 cm`.
+   - This becomes the **ending point** of the line.
 
-#####lock file
+##########################################################
+
+
+#####lock file#############################
 #find . -name '*lck*' '*panic.log*'
 #find . -name '*lck*' '*panic.log*' -exec rm {} +
 find . \( -name '*lck*' -o -name '*panic.log*' \)
 find . \( -name '*lck*' -o -name '*panic.log*' \) -exec rm {} +
-
+###################################################
 
 ####python related :
 pip show torch (or package name)  ## this will show the deltails of the package where installed, which version etc....
