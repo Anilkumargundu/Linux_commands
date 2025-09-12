@@ -67,6 +67,7 @@ dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
    - This becomes the **ending point** of the line.
 
 ##########################################################
+One can define node anywhere like this "\draw (Va) ++(0,-0.15) node[left] {$V_{a}$};", only ++ means the point just moves and no line is drawn. On the other hand, if -- added with ++  , a line is drawn
 
 
 #####lock file#############################
