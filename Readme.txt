@@ -179,6 +179,11 @@ For a given MOS size, the better way is to see the transconductance plot to get 
 
 ######BETA MULTIPLIER DESIGN#######
 step 1 : First decide the bias current (minimum bias current in power consumption perspective?)
+Both are possible. In practice the resistor in a β-multiplier can be either on-chip or off-chip. Research papers often show an off-chip (external) resistor because it makes prototypes easier to characterise, trim and compare. In production you’ll more often see on-chip resistors or on-chip resistor arrays with trimming/calibration to save BOM and board area
+
+Common applications / contexts for off-chip tuning (with examples)
+Prototype characterization & measurement
+Example: In a lab you want to sweep R to see how IREF, Vbias or loop stability changes. Using an external trimmer or resistor pack is fast and safe.
 
 
 ##########ESD PROTECTION ###########
