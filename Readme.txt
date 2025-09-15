@@ -68,7 +68,8 @@ dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
 
 ##########################################################
 One can define node anywhere like this "\draw (Va) ++(0,-0.15) node[left] {$V_{a}$};", only ++ means the point just moves and no line is drawn. On the other hand, if -- added with ++  , a line is drawn
-
+\draw (Roff) to[short]++(0,0) node[ground, scale=1,line width=1pt]{};
+############################################################
 
 #####lock file#############################
 #find . -name '*lck*' '*panic.log*'
