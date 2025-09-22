@@ -240,6 +240,8 @@ name=s1 only_toplevel=false value= "
  write inv_tran.raw
 .endc"
 
+##############################AC analysis ngspice #############################
+name=Vin value="dc 1 ac 1"
 
 
 
