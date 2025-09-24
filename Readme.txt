@@ -202,6 +202,17 @@ Let's say the memory has labelled as "512words*74bits with mux8" what it actuall
 
 SELF TIMED SRAM : FEEDBACK IS MADE INBUILT
 
+
+#######################QUANTUM-COMPUTING vs CLASSICAL COMPTING DIFFERENCE####################
+
+Quantum vs Classical Computing (N-bit system)
+An N-bit quantum computer: Can exist in an infinite number of intermediate states (superpositions) during computation. This means calculations explore a vastly larger state space in the background. But upon measurement, the result collapses to one of the 2^N classical states.
+
+A classical N-bit computer:
+Works only with those 2^N states at every step, even during intermediate calculations. This inherently limits its computational power compared to quantum systems.
+
+########################################################################################
+
 ############################
 
 Open_source Simulators I am using :
