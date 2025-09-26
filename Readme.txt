@@ -211,6 +211,8 @@ An N-bit quantum computer: Can exist in an infinite number of intermediate state
 A classical N-bit computer:
 Works only with those 2^N states at every step, even during intermediate calculations. This inherently limits its computational power compared to quantum systems.
 
+All the quantum gates can be expressed as unitary matrices
+
 ########################################################################################
 
 ############################
