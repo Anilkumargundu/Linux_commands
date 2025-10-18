@@ -71,6 +71,13 @@ One can define node anywhere like this "\draw (Va) ++(0,-0.15) node[left] {$V_{a
 \draw (Roff) to[short]++(0,0) node[ground, scale=1,line width=1pt]{};
 ############################################################
 
+#######################ellipse############################
+% Spinning coin at cube center
+% \draw[thick, line width=1.25pt, dashed,->,rotate around={45:(1.25,1.25)}] (1.25,1.25) ellipse (0.85cm and 0.2cm);
+% \draw[thick, line width=1.25pt, dashed,->,rotate around={135:(1.25,1.25)}] (1.25,1.25) ellipse (0.85cm and 0.2cm);
+#########################################################
+
+
 #####lock file#############################
 #find . -name '*lck*' '*panic.log*'
 #find . -name '*lck*' '*panic.log*' -exec rm {} +
