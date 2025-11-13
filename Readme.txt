@@ -316,6 +316,12 @@ pip install -r requirements.txt
 (If pip install fails, install system build deps like build-essential, python3-dev etc — many tutorials use those.) 
 GitHub
 
+LIBERTY FILE (.lib file):
+The look-up table is formed for different parametrs for input slew vs the output capacitances (always)
+
+
+
+
 3) Tell OpenRAM where your PDK and tools are (important env vars)
 Add these lines to your ~/.bashrc (or ~/.zshrc), then source ~/.bashrc:
 
