@@ -316,10 +316,14 @@ pip install -r requirements.txt
 (If pip install fails, install system build deps like build-essential, python3-dev etc — many tutorials use those.) 
 GitHub
 
+##################################
 LIBERTY FILE (.lib file):
 The look-up table is formed for different parametrs for input slew vs the output capacitances (always)
 
-
+###############################
+Concurrent Current Source Method :
+The output drive current is dominated by transistor behavior (mainly VGS), while VDS only weakly influences it during most of the switching interval. Therefore, changes in capacitive load significantly change Vout(t), but only slightly affect the current waveform I(t). Therefore it is always mandatory to store current wavform rather than the voltage wafeform as the current waveform will behave more or less similar at all different load conditions
+################################################
 
 
 3) Tell OpenRAM where your PDK and tools are (important env vars)
