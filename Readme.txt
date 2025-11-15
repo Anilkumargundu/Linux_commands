@@ -325,6 +325,14 @@ Concurrent Current Source Method :
 The output drive current is dominated by transistor behavior (mainly VGS), while VDS only weakly influences it during most of the switching interval. Therefore, changes in capacitive load significantly change Vout(t), but only slightly affect the current waveform I(t). Therefore it is always mandatory to store current wavform rather than the voltage wafeform as the current waveform will behave more or less similar at all different load conditions
 ################################################
 
+##############KEY POINT YOU REMEMBER WHEN ANALYSIS STA####################
+JUST REMEMBER :
+1) THE DATA SHOULD NOT CHANGE BEFORE THE CLOCK EDGE FOR SOME TIME (setup)
+2) THE DATA SHOULD NOT CHANGE AFTER THE CLOCK EDGE FOR SOME TIME (hold)
+EVERY FLOP WILL HAVE THIS RULE AND NEED TO APPLY WHILE ANALYZING
+FINAL POINT IS WHILE APPLYING THE ABOVE LOGICS, THE DATA WE LAUNCH AT THE INPUT SHOULD BE SUCCESSFULLY RECOVERED. WE HAVE TO TIME THEM ACCORDINGLY. THATS THE WHOLE LOGIC OF STA
+###########################################################################
+
 ############SETUP TIME SIMPLIFY EXAMPLE WITH D FLIPFLOP #############
 Lets say master mx is 1ns delay and slave mux is 3ns delay. The clock is 10ns cycle.
 Master mux delay = 1 ns
