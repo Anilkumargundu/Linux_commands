@@ -325,6 +325,16 @@ Concurrent Current Source Method :
 The output drive current is dominated by transistor behavior (mainly VGS), while VDS only weakly influences it during most of the switching interval. Therefore, changes in capacitive load significantly change Vout(t), but only slightly affect the current waveform I(t). Therefore it is always mandatory to store current wavform rather than the voltage wafeform as the current waveform will behave more or less similar at all different load conditions
 ################################################
 
+############SETUP TIME SIMPLIFY EXAMPLE WITH D FLIPFLOP #############
+Lets say master mx is 1ns delay and slave mux is 3ns delay. The clock is 10ns cycle.
+Master mux delay = 1 ns
+This means:
+After D changes → it takes 1 ns for the change to appear reliably at the master latch output.
+Clock is about to rise…
+At the rising edge, the master mux closes.
+For the master mux to store a clean value, D must not change within 1 ns before the rising edge, because the latch needs that 1 ns to settle.
+This 1 ns is the setup time.
+###################
 
 3) Tell OpenRAM where your PDK and tools are (important env vars)
 Add these lines to your ~/.bashrc (or ~/.zshrc), then source ~/.bashrc:
