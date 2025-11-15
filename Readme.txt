@@ -332,8 +332,8 @@ JUST REMEMBER :
 EVERY FLOP WILL HAVE THIS RULE AND NEED TO APPLY WHILE ANALYZING
 FINAL POINT IS WHILE APPLYING THE ABOVE LOGICS, THE DATA WE LAUNCH AT THE INPUT SHOULD BE SUCCESSFULLY RECOVERED. WE HAVE TO TIME THEM ACCORDINGLY. THATS THE WHOLE LOGIC OF STA
 
-SETUP TIME IS CONSECUTIVE CLOCK EDGES
-HOLD TIME IS SAME CLOCK EDGE
+SETUP TIME IS CONSECUTIVE CLOCK EDGES ; For setup constrains data has to be propgate fast enough to capture at the launch flip flop by the next clock edge
+HOLD TIME IS SAME CLOCK EDGE ; For hold constraints data should be slow enough so that it will not toggle immediately after the same clock edge
 ###########################################################################
 
 ############SETUP TIME SIMPLIFY EXAMPLE WITH D FLIPFLOP #############
