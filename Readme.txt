@@ -471,5 +471,12 @@ sh run_lvs.sh
 To run venv : source venv_openram/bin/activate
 run the command in openram folder :  source venv_openram/bin/activate , this creates environemnt 
 
+#######################GVIM COMMANDS################
+:g/PATTERN/y A | new | put A | w file.txt
 
+Explanation
+:g/\<PIN/y A → yanks matching lines into register A (append)
+:new → opens a new empty buffer
+:put A → pastes only those lines
+:w file.txt → writes exactly what you copied
 
