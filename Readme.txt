@@ -1,3 +1,8 @@
+International Patent Application (PCT, Published)
+Title: System for Motion Sensing and Energy Harvesting
+Publication No.: WO 2025/254594
+
+
 Basic commands in Linux
 lsb_release -a  ###to check the version of ubuntu
 df -h    ##check the space
