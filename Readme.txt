@@ -2,6 +2,7 @@ International Patent Application (PCT, Published)
 Title: System for Motion Sensing and Energy Harvesting
 Publication No.: WO 2025/254594
 
+####################################################################
 CONFIG VIEW NOTES :
 ✔ Config view manages multiple views of cells
 ✔ Allows easy switching between schematic and post-layout
@@ -9,6 +10,14 @@ CONFIG VIEW NOTES :
 ✔ Enables flexible, scalable simulation flows
 ✔ Essential for LVS, PEX, and sign-off simulation
 
+✅ What a Config View IS (Core Idea)
+A config view is a manager / selector of views
+It does not contain circuit data itself
+It tells the tools which view to use for each cell during:
+   Simulation
+   LVS
+   PEX-based runs
+#################################################################
 
 
 Basic commands in Linux
