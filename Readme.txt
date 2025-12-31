@@ -2,6 +2,14 @@ International Patent Application (PCT, Published)
 Title: System for Motion Sensing and Energy Harvesting
 Publication No.: WO 2025/254594
 
+CONFIG VIEW NOTES :
+✔ Config view manages multiple views of cells
+✔ Allows easy switching between schematic and post-layout
+✔ Reduces manual effort and errors
+✔ Enables flexible, scalable simulation flows
+✔ Essential for LVS, PEX, and sign-off simulation
+
+
 
 Basic commands in Linux
 lsb_release -a  ###to check the version of ubuntu
