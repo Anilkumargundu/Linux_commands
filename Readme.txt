@@ -30,6 +30,7 @@ chmod 775 folder_name    ### to provide read, write and other permissions when t
 visudo           ##to add sudo usser for admin access""
 cat /etc/passwd      ####path that shows the user app_name
 cat /etc/shadow             ###########to know the shell and home folder
+chmod +775 * 
 
 cat   ## to see the content int the file
 cat auth.log | less   ##(to see page by page)
