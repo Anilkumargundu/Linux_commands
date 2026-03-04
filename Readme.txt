@@ -19,6 +19,7 @@ It tells the tools which view to use for each cell during:
    PEX-based runs
 #################################################################
 
+ESD circuit should be beteen PAD and real VDD or between PAD and real ground
 
 Basic commands in Linux
 lsb_release -a  ###to check the version of ubuntu
