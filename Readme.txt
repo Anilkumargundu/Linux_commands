@@ -17,9 +17,10 @@ It tells the tools which view to use for each cell during:
    Simulation
    LVS
    PEX-based runs
+One can selectively replace spice files for a specific cells in a big circuit using cofig view and then do the simulations (layout extracted also)
 #################################################################
 
-ESD circuit should be beteen PAD and real VDD or between PAD and real ground
+ESD circuit should be beteen PAD and real VDD or between PAD and real ground. 
 
 Basic commands in Linux
 lsb_release -a  ###to check the version of ubuntu
