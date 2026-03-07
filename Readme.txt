@@ -21,7 +21,7 @@ One can selectively replace spice files for a specific cells in a big circuit us
 #################################################################
 
 ESD circuit should be beteen PAD and real VDD or between PAD and real ground. 
-IO cells connected between the PAD and core with invisible control signals that transfer from one cell to another cell
+IO cells connected between the PAD and core with invisible control signals that transfer from one cell to another cell. this cells will have pocctrl signal
 
 Basic commands in Linux
 lsb_release -a  ###to check the version of ubuntu
