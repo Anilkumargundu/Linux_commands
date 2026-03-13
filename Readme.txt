@@ -22,6 +22,7 @@ One can selectively replace spice files for a specific cells in a big circuit us
 
 ESD circuit should be beteen PAD and real VDD or between PAD and real ground. 
 IO cells connected between the PAD and core with invisible control signals that transfer from one cell to another cell. this cells will have pocctrl signal
+Liberate tool can be used for normal spectre simulations?
 
 Basic commands in Linux
 lsb_release -a  ###to check the version of ubuntu
